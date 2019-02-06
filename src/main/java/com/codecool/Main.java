@@ -1,13 +1,27 @@
 package com.codecool;
 
-public class Main {
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
-    public String getWelcomeString() {
-        return "Hi!";
-    }
+public class Main extends Application {
 
     public static void main(String[] args) {
-        Main main = new Main();
-        System.out.println(main.getWelcomeString());
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        FXMLLoader fxmlLoader;
+        fxmlLoader = new FXMLLoader( getClass().getResource("/fxml/register.fxml") );
+
+        Parent content = fxmlLoader.load();
+        Scene mainScene = new Scene(content);
+        primaryStage.setScene(mainScene);
+        primaryStage.sizeToScene();
+        primaryStage.show();
     }
 }
