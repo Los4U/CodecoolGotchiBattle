@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codecool.controller.ArenaController">
+   <top>
+      <HBox alignment="TOP_RIGHT" prefHeight="172.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="player2NameTF" prefHeight="34.0" prefWidth="173.0" />
+         </children></HBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="177.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="177.0" prefWidth="173.0">
+               <children>
+                  <Label fx:id="player1NameTF" prefHeight="34.0" prefWidth="100.0" />
+                  <Button fx:id="primaryAttackButton" mnemonicParsing="false" text="Primary" />
+                  <Button fx:id="secondaryAttackButton" mnemonicParsing="false" text="Secondary" />
+                  <Button fx:id="defenseButton" mnemonicParsing="false" text="Defense" />
+                  <Button fx:id="evadeButton" mnemonicParsing="false" text="Evade" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

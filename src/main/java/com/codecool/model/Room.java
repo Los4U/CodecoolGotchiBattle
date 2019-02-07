@@ -3,18 +3,11 @@ package com.codecool.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Game {
-    private static Game instance = null;
+public class Room {
     private List<User> players;
 
-    private Game() {
+    public Room() {
         players = new ArrayList<>();
-    }
-
-    public static Game getInstance() {
-        if (instance == null) instance = new Game();
-
-        return instance;
     }
 
     public void createPlayer(String name, Gotchi gotchi) {
@@ -27,7 +20,11 @@ public class Game {
         return new Gotchi(name, type, attack, speed, defence);
     }
 
-    public boolean isReady() {
+    public boolean canCreateGotchi(String name, Type type, int attack, int speed, int defence) {
+        return true;
+    }
+
+    public boolean isFull() {
         return players.size() > 1;
     }
 }
