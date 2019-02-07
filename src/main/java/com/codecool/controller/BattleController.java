@@ -4,6 +4,8 @@ import com.codecool.model.Battle;
 import com.codecool.model.Gotchi;
 import com.codecool.model.Type;
 
+import java.util.ArrayList;
+
 public class BattleController {
     private Battle battle;
     private static BattleController instance;
@@ -23,6 +25,10 @@ public class BattleController {
         battle.createGotchiByPC();
     }
 
+    public ArrayList<String> battleControllerAction(String actionType){
+        return battle.carryAttack(actionType);
+    }
+
     public Gotchi getFirstPlayer() {
         return battle.getPlayer1();
     }
@@ -30,4 +36,6 @@ public class BattleController {
     public Gotchi getSecondPlayer() {
         return battle.getPlayer2();
     }
+
+
 }
