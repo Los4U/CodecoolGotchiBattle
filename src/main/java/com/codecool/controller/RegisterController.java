@@ -4,7 +4,6 @@ import com.codecool.model.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.scene.layout.Pane;
@@ -14,7 +13,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class RegisterController implements Initializable {
-    private BattleController battleController;
     private MainController mainController;
 
     public void setMainController(MainController mainController) {
@@ -23,7 +21,6 @@ public class RegisterController implements Initializable {
 
     @FXML
     private TextField player1Input;
-
 
     @FXML
     private TextField attackAmount;
@@ -45,7 +42,7 @@ public class RegisterController implements Initializable {
         int defense = Integer.valueOf(defenseAmount.getText());
         int speed = Integer.valueOf(speedAmount.getText());
 
-        battleController.createGotchies(player1Name, type, attack, speed, defense);
+        BattleController.getInstance().createGotchies(player1Name, type, attack, speed, defense);
         this.startBattle();
     }
 
@@ -56,7 +53,6 @@ public class RegisterController implements Initializable {
         typeCB.getItems().add(Type.SCISSORS);
         typeCB.setValue(Type.PAPER);
 
-        battleController = new BattleController();
     }
 
     @FXML

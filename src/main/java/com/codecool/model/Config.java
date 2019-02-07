@@ -8,4 +8,5 @@ public class Config {
     public static final String BATTLE_PATH = "/fxml/arena.fxml";
     public static final String MENU_SCREEN_PATH = "/fxml/menuScreen.fxml";
     public static final String MAIN_SCREEN_PATH = "/fxml/mainScreen.fxml";
+    public static final String IMAGES_PATH = "/images/";
 }

@@ -1,16 +1,33 @@
 package com.codecool.controller;
 
 import com.codecool.model.Battle;
+import com.codecool.model.Gotchi;
 import com.codecool.model.Type;
 
 public class BattleController {
     private Battle battle;
+    private static BattleController instance;
 
-    public BattleController() {
-        battle = Battle.getInstance();
+    private BattleController() {
+        battle = new Battle();
+    }
+
+    public static BattleController getInstance() {
+        if (null == instance) instance = new BattleController();
+
+        return instance;
     }
 
     public void createGotchies(String player1Name, Type type, int attack, int speed, int defense) {
-        battle.createTwoGotchies(player1Name, type, attack, speed, defense);
+        battle.initPlayer1(player1Name, type, attack, speed, defense);
+        battle.createGotchiByPC();
+    }
+
+    public Gotchi getFirstPlayer() {
+        return battle.getPlayer1();
+    }
+
+    public Gotchi getSecondPlayer() {
+        return battle.getPlayer2();
     }
 }

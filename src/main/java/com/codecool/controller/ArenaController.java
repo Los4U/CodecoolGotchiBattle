@@ -60,13 +60,26 @@ public class ArenaController implements Initializable {
     @FXML
     private Button evadeButton;
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Battle battle = Battle.getInstance();
-        Gotchi firstGotchi = battle.getGotchiByIndex(0);
-        Gotchi secondGotchi = battle.getGotchiByIndex(1);
+        BattleController battleController = BattleController.getInstance();
+        Gotchi firstGotchi = battleController.getFirstPlayer();
+        Gotchi secondGotchi = battleController.getSecondPlayer();
+
 
         player1NameTF.setText(firstGotchi.getName());
         player2NameTF.setText(secondGotchi.getName());
+        loadPlayersImages(firstGotchi.getType(), secondGotchi.getType());
+    }
+
+    private void loadPlayersImages(Type player1Type, Type player2Type) {
+        String player1ImagePath = String.valueOf(this.getClass().getResource("/images/" + player2Type.getValue()));
+        String player2ImagePath = String.valueOf(this.getClass().getResource(Config.IMAGES_PATH + player2Type.getValue()));
+        System.out.println(player1ImagePath);
+        System.out.println(player2ImagePath);
+
+        player1Image.setImage(new Image(String.valueOf(player1ImagePath)));
+        player2Image.setImage(new Image(String.valueOf(player2ImagePath)));
     }
 }

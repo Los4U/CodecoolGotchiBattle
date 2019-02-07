@@ -4,41 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Battle {
-    private static Battle instance = null;
-    private boolean finished;
-    private List<Gotchi> gotchiPool;
+    private Gotchi player1;
+    private Gotchi player2;
 
-    private Battle() {
-        gotchiPool = new ArrayList<>();
-        finished = false;
+    public void initPlayer1(String name, Type type, int attack, int speed, int defense){
+        player1 = new Gotchi(name, type, attack, speed, defense);
     }
 
-    public static Battle getInstance() {
-        if (null == instance) instance = new Battle();
-
-        return instance;
+    public void initPlayer2(String name, Type type, int attack, int speed, int defense){
+        player2 = new Gotchi(name, type, attack, speed, defense);
     }
 
-    public void createTwoGotchies(String name, Type type, int attack, int speed, int defense){
-        createSingleGotchi(name, type, attack, speed, defense);
-        createGotchiByPC();
+    public void createGotchiByPC(){
+        initPlayer2("Computer's Gotchi", Type.ROCK, 50, 50, 50);
     }
 
-    private void createSingleGotchi(String name, Type type, int attack, int speed, int defense) {
-        gotchiPool.add(new Gotchi(name, type, attack, speed, defense));
+    public Gotchi getPlayer1() {
+        return player1;
     }
 
-    private void createGotchiByPC(){
-        String name = "Player2 Gotchi";
-        Type type = Type.PAPER;
-        int attack = 50;
-        int speed = 80;
-        int defense = 70;
-
-        gotchiPool.add(new Gotchi(name, type, attack, speed, defense));
-    }
-
-    public Gotchi getGotchiByIndex(int index) {
-        return gotchiPool.get(index);
+    public Gotchi getPlayer2() {
+        return player2;
     }
 }
