@@ -74,10 +74,8 @@ public class ArenaController implements Initializable {
     }
 
     private void loadPlayersImages(Type player1Type, Type player2Type) {
-        String player1ImagePath = String.valueOf(this.getClass().getResource("/images/" + player2Type.getValue()));
+        String player1ImagePath = String.valueOf(this.getClass().getResource(Config.IMAGES_PATH + player1Type.getValue()));
         String player2ImagePath = String.valueOf(this.getClass().getResource(Config.IMAGES_PATH + player2Type.getValue()));
-        System.out.println(player1ImagePath);
-        System.out.println(player2ImagePath);
 
         player1Image.setImage(new Image(String.valueOf(player1ImagePath)));
         player2Image.setImage(new Image(String.valueOf(player2ImagePath)));
