@@ -1,7 +1,6 @@
 package com.codecool.model;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Battle {
 
@@ -10,7 +9,7 @@ public class Battle {
     private int gotchi1health = Config.MAX_HEALTH ;
     private int gotchi2health = Config.MAX_HEALTH ;
     private int gotchi1stamina = Config.MAX_STAMINA;
-    private int gotchi2stamina = Config.MAX_STAMINA;;
+    private int gotchi2stamina = Config.MAX_STAMINA;
 
 
     public void initPlayer1(String name, Type type, int attack, int speed, int defense){
@@ -25,7 +24,7 @@ public class Battle {
         initPlayer2("Computer's Gotchi", Type.ROCK, 70, 70, 60);
     }
 
-    public ArrayList<String> carryAttack(Action playerOneAcction){
+    public ArrayList<String> carryAction(Action playerOneAcction){
         ArrayList<String> info = new ArrayList<>(5);
 
         for (int i = 0; i < 5; i++) {

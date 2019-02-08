@@ -1,8 +1,9 @@
 package com.codecool.model;
 
 public class Gotchi {
-    private int id;
     private static int counter = 0;
+
+    private int id;
     private String name;
     private Type type;
     private int attack;

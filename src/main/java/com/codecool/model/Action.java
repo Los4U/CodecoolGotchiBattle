@@ -1,5 +1,7 @@
 package com.codecool.model;
 
+import java.util.Random;
+
 public enum Action {
     PRIMARY(1.0, 20),
     SECONDARY( 0.75, 20),
@@ -20,5 +22,10 @@ public enum Action {
 
     public int getStaminaSpend() {
         return staminaSpend;
+    }
+
+    public static Action getRandomAction() {
+        Random random = new Random();
+        return values()[random.nextInt(values().length)];
     }
 }

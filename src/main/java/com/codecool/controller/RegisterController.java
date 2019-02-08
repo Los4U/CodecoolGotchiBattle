@@ -94,6 +94,7 @@ public class RegisterController implements Initializable {
             pane = loader.load();
         } catch (IOException e) {
             e.printStackTrace();
+            throw new RuntimeException(e);
         }
         mainController.setScreen(pane);
     }
@@ -115,7 +116,7 @@ public class RegisterController implements Initializable {
             statPointsTF.setText(String.valueOf(Config.STATISTICS_POINTS - (attack + speed + defense)));
         } catch (Exception ex) {
             ex.printStackTrace();
-            System.out.println(ex);
+
         }
 
     }

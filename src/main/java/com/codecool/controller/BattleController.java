@@ -15,6 +15,10 @@ public class BattleController {
         battle = new Battle();
     }
 
+    public static void reset() {
+        instance = null;
+    }
+
     public static BattleController getInstance() {
         if (null == instance) instance = new BattleController();
 
@@ -27,7 +31,7 @@ public class BattleController {
     }
 
     public ArrayList<String> battleControllerAction(Action actionType){
-        return battle.carryAttack(actionType);
+        return battle.carryAction(actionType);
     }
 
     public Gotchi getFirstPlayer() {
