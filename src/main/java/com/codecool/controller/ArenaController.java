@@ -74,6 +74,11 @@ public class ArenaController implements Initializable {
         player2NameTF.setText(secondGotchi.getName());
 
         loadPlayersImages(firstGotchi.getType(), secondGotchi.getType());
+
+        primaryAttackButton.setUserData(Action.PRIMARY);
+        secondaryAttackButton.setUserData(Action.SECONDARY);
+        defenseButton.setUserData(Action.DEFENSE);
+        evadeButton.setUserData(Action.EVADE);
     }
 
     private void loadPlayersImages(Type player1Type, Type player2Type) {
