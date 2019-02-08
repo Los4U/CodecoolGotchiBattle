@@ -91,7 +91,7 @@ public class ArenaController implements Initializable {
 
     public void action(ActionEvent actionEvent) {
         Button button = (Button)actionEvent.getSource();
-        String action = button.getText();
+        Action action = (Action) button.getUserData();
 
         battleStatus = battleController.battleControllerAction(action);
 
@@ -100,9 +100,6 @@ public class ArenaController implements Initializable {
 
         player1HP.setText(String.valueOf(battleStatus.get(Config.PLAYER_1_STP)));
         player1STP.setText(String.valueOf(battleStatus.get(Config.PLAYER_1_STP)));
-
-
-
     }
 }
 
