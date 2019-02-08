@@ -1,5 +1,6 @@
 package com.codecool.controller;
 
+import com.codecool.model.Action;
 import com.codecool.model.Battle;
 import com.codecool.model.Gotchi;
 import com.codecool.model.Type;
@@ -25,7 +26,7 @@ public class BattleController {
         battle.createGotchiByPC();
     }
 
-    public ArrayList<String> battleControllerAction(String actionType){
+    public ArrayList<String> battleControllerAction(Action actionType){
         return battle.carryAttack(actionType);
     }
 
