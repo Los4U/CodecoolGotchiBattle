@@ -1,5 +1,6 @@
 package com.codecool.controller;
 
+import com.codecool.model.Action;
 import com.codecool.model.Config;
 import com.codecool.model.Gotchi;
 import com.codecool.model.Type;
@@ -61,12 +62,6 @@ public class ArenaController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-        primaryAttackButton.setMinWidth(150);
-        secondaryAttackButton.setMinWidth(150);
-        defenseButton.setMinWidth(150);
-        evadeButton.setMinWidth(150);
-
         battleController = BattleController.getInstance();
         Gotchi firstGotchi = battleController.getFirstPlayer();
         Gotchi secondGotchi = battleController.getSecondPlayer();
