@@ -44,19 +44,19 @@
                   </TextField>
                </children>
             </HBox>
-            <Button fx:id="primaryAttackButton" mnemonicParsing="false" onAction="#action" text="Primary">
+            <Button fx:id="primaryAttackButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="150" mnemonicParsing="false" onAction="#action" text="Primary">
                <VBox.margin>
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </VBox.margin></Button>
-            <Button fx:id="secondaryAttackButton" mnemonicParsing="false" onAction="#action" text="Secondary">
+            <Button fx:id="secondaryAttackButton" mnemonicParsing="false" minWidth="150" onAction="#action" text="Secondary">
                <VBox.margin>
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </VBox.margin></Button>
-            <Button fx:id="defenseButton" mnemonicParsing="false" onAction="#action" text="Defense">
+            <Button fx:id="defenseButton" mnemonicParsing="false" minWidth="150" onAction="#action" text="Defense">
                <VBox.margin>
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </VBox.margin></Button>
-            <Button fx:id="evadeButton" mnemonicParsing="false" onAction="#action" text="Evade">
+            <Button fx:id="evadeButton" mnemonicParsing="false" minWidth="150" onAction="#action" text="Evade">
                <VBox.margin>
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </VBox.margin></Button>
