@@ -25,40 +25,40 @@ public class Battle {
         initPlayer2("Computer's Gotchi", Type.ROCK, 50, 50, 50);
     }
 
-    public ArrayList<String> carryAttack(String playerOneAcction){
-        ArrayList<String> info = new ArrayList<>(5);
+    public ArrayList<String> carryAction(String playerOneAcction){
+        ArrayList<String> returnMessage = new ArrayList<>();
 
         for (int i = 0; i < 5; i++) {
-            info.add("test");
+            returnMessage.add("test");
         }
 
 
 
         if(playerOneAcction.equals("Primary")){
-            info.set(Config.PLAYER_1_STATUS, "Player: " + player1.getName() + " did PRIMARY ATTACK");
+            returnMessage.set(Config.PLAYER_1_STATUS, "Player: " + player1.getName() + " did PRIMARY ATTACK");
             gotchi1stamina -= 20;
-            info.set(Config.PLAYER_1_STP, String.valueOf(gotchi1stamina));
+            returnMessage.set(Config.PLAYER_1_STP, String.valueOf(gotchi1stamina));
         }else if(playerOneAcction.equals("Secondary")){
-            info.set(Config.PLAYER_1_STATUS, "Player: " + player1.getName() + " did SECONDARY ATTACK");
+            returnMessage.set(Config.PLAYER_1_STATUS, "Player: " + player1.getName() + " did SECONDARY ATTACK");
             gotchi1stamina -= 20;
-            info.set(Config.PLAYER_1_STP, String.valueOf(gotchi1stamina));
+            returnMessage.set(Config.PLAYER_1_STP, String.valueOf(gotchi1stamina));
 
         }else if(playerOneAcction.equals("Defense")){
-            info.set(Config.PLAYER_1_STATUS, "Player: " + player1.getName() + " did DEFENSE");
+            returnMessage.set(Config.PLAYER_1_STATUS, "Player: " + player1.getName() + " did DEFENSE");
             gotchi1stamina -= 10;
-            info.set(Config.PLAYER_1_STP, String.valueOf(gotchi1stamina));
+            returnMessage.set(Config.PLAYER_1_STP, String.valueOf(gotchi1stamina));
 
         }else if (playerOneAcction.equals("Evade")){
-            info.set(Config.PLAYER_1_STATUS, "Player: " + player1.getName() + " did EVADE");
+            returnMessage.set(Config.PLAYER_1_STATUS, "Player: " + player1.getName() + " did EVADE");
             gotchi1stamina -= 5;
-            info.set(Config.PLAYER_1_STP, String.valueOf(gotchi1stamina));
+            returnMessage.set(Config.PLAYER_1_STP, String.valueOf(gotchi1stamina));
         }
 
-        for(String elem: info){
+        for(String elem: returnMessage){
             System.out.println(elem);
         }
 
-        return info;
+        return returnMessage;
     }
 
 
