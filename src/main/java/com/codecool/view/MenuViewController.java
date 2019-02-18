@@ -1,5 +1,6 @@
-package com.codecool.controller;
+package com.codecool.view;
 
+import com.codecool.controller.MainController;
 import com.codecool.model.Config;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,7 +10,7 @@ import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 
-public class MenuController {
+public class MenuViewController {
 
     public void setMainController(MainController mainController) {
         this.mainController = mainController;
@@ -30,8 +31,8 @@ public class MenuController {
             e.printStackTrace();
         }
 
-        RegisterController registerController = loader.getController();
-        registerController.setMainController(mainController);
+        RegisterViewController registerViewController = loader.getController();
+        registerViewController.setMainController(mainController);
         mainController.setScreen(pane);
     }
 

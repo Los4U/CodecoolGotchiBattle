@@ -1,5 +1,7 @@
-package com.codecool.controller;
+package com.codecool.view;
 
+import com.codecool.controller.BattleController;
+import com.codecool.controller.MainController;
 import com.codecool.model.*;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.value.ChangeListener;
@@ -16,7 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class RegisterController implements Initializable {
+public class RegisterViewController implements Initializable {
     private MainController mainController;
 
     public void setMainController(MainController mainController) {

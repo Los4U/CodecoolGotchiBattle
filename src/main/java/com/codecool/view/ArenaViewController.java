@@ -1,5 +1,6 @@
-package com.codecool.controller;
+package com.codecool.view;
 
+import com.codecool.controller.BattleController;
 import com.codecool.model.Config;
 import com.codecool.model.Gotchi;
 import com.codecool.model.Type;
@@ -16,7 +17,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class ArenaController implements Initializable {
+public class ArenaViewController implements Initializable {
 
     // Player 1 state elements
     @FXML
@@ -92,6 +93,9 @@ public class ArenaController implements Initializable {
     public void action(ActionEvent actionEvent) {
         Button button = (Button)actionEvent.getSource();
         String action = button.getText();
+
+        //Action actionEnum = Action.valueOf(action.toUpperCase());
+        //System.out.println("enum" + actionEnum);
 
         battleStatus = battleController.battleControllerAction(action);
 
