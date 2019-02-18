@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codecool.controller.ArenaController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codecool.view.ArenaViewController">
    <left>
       <VBox alignment="TOP_CENTER" prefHeight="177.0" prefWidth="173.0" spacing="5.0" BorderPane.alignment="CENTER">
          <children>
@@ -85,6 +85,7 @@
          <children>
             <TextField fx:id="messagePlayer1" layoutX="-8.0" layoutY="174.0" prefHeight="26.0" prefWidth="281.0" />
             <TextField fx:id="messagePlayer2" layoutX="-6.0" layoutY="208.0" prefHeight="26.0" prefWidth="280.0" />
+            <Button layoutX="55.0" layoutY="258.0" mnemonicParsing="false" text="Button" />
          </children>
       </Pane>
    </center>
