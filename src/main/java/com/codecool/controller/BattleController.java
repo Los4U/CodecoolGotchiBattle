@@ -26,7 +26,7 @@ public class BattleController {
     }
 
     public ArrayList<String> battleControllerAction(String actionType){
-        return battle.carryAttack(actionType);
+        return battle.carryAction(actionType);
     }
 
     public Gotchi getFirstPlayer() {
