@@ -1,6 +1,7 @@
 package com.codecool.controller;
 
 import com.codecool.model.Config;
+import com.codecool.view.MenuViewController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -25,8 +26,8 @@ public class MainController implements Initializable {
             e.printStackTrace();
         }
 
-        MenuController menuController = loader.getController();
-        menuController.setMainController(this);
+        MenuViewController menuViewController = loader.getController();
+        menuViewController.setMainController(this);
 
         setScreen(pane);
     }
